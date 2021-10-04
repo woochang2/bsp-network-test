@@ -1,0 +1,114 @@
+---
+name: test-network-org1
+version: 1.0.0
+client:
+  organization: Org1
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+  url: client0.edgechain0.com
+  clientid: client0.edgechain0.com
+  shardid: edgechain::0
+organizations:
+  Org1:
+    mspid: Org1MSP
+    peers:
+    - peer0.org1.example.com
+    certificateAuthorities:
+    - ca.org1.example.com
+bsp:
+  bsp0.executor.edgechain0.com:
+    url: grpcs://bsp0.executor.edgechain0.com:10000
+    active: true
+  bsp1.executor.edgechain0.com:
+    url: grpcs://bsp1.executor.edgechain0.com:10000
+    active: false
+auditors:
+  auditor1.edgechain0.com:
+    url: grpcs://auditor1.edgechain0.com:10000
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICJzCCAc2gAwIBAgIUDZ1FJ2ECeV3+dTtkpRjS/kAUulowCgYIKoZIzj0EAwIw
+        cDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ8wDQYDVQQH
+        EwZEdXJoYW0xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+        Lm9yZzEuZXhhbXBsZS5jb20wHhcNMjEwNjAyMTIzNDAwWhcNMzYwNTI5MTIzNDAw
+        WjBwMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExDzANBgNV
+        BAcTBkR1cmhhbTEZMBcGA1UEChMQb3JnMS5leGFtcGxlLmNvbTEcMBoGA1UEAxMT
+        Y2Eub3JnMS5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABE+Y
+        6i1bhydmcVhwFOsHPYARdLCKTq55C1Aal0k0ZeW+brYUxYA2qVGFrhhc3qb09YL0
+        VdB+bWSscdsBb2cq0VSjRTBDMA4GA1UdDwEB/wQEAwIBBjASBgNVHRMBAf8ECDAG
+        AQH/AgEBMB0GA1UdDgQWBBTHesmPDLTOizufD1umli6jNpqhrTAKBggqhkjOPQQD
+        AgNIADBFAiEAu9Z57V/L9Ot5Dez2UfYOZgB/YrDpW1nKHlqB7qFu3jsCICb5dPEE
+        A8r8bKjs/ZXfXdUjKaJtODmDhY7xUFlOUq0P
+        -----END CERTIFICATE-----
+  auditor2.edgechain0.com:
+    url: grpcs://auditor2.edgechain0.com:10000
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICJzCCAc2gAwIBAgIUDZ1FJ2ECeV3+dTtkpRjS/kAUulowCgYIKoZIzj0EAwIw
+        cDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ8wDQYDVQQH
+        EwZEdXJoYW0xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+        Lm9yZzEuZXhhbXBsZS5jb20wHhcNMjEwNjAyMTIzNDAwWhcNMzYwNTI5MTIzNDAw
+        WjBwMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExDzANBgNV
+        BAcTBkR1cmhhbTEZMBcGA1UEChMQb3JnMS5leGFtcGxlLmNvbTEcMBoGA1UEAxMT
+        Y2Eub3JnMS5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABE+Y
+        6i1bhydmcVhwFOsHPYARdLCKTq55C1Aal0k0ZeW+brYUxYA2qVGFrhhc3qb09YL0
+        VdB+bWSscdsBb2cq0VSjRTBDMA4GA1UdDwEB/wQEAwIBBjASBgNVHRMBAf8ECDAG
+        AQH/AgEBMB0GA1UdDgQWBBTHesmPDLTOizufD1umli6jNpqhrTAKBggqhkjOPQQD
+        AgNIADBFAiEAu9Z57V/L9Ot5Dez2UfYOZgB/YrDpW1nKHlqB7qFu3jsCICb5dPEE
+        A8r8bKjs/ZXfXdUjKaJtODmDhY7xUFlOUq0P
+        -----END CERTIFICATE-----
+# Policy Candidates: "EC_SPEC", "EC_ORDERED", "EC_PREPARED", "EC_COMMIT", "MC_ORDERED", "MC_COMMIT", "MC_PROGRESS"      
+aggregators:
+  aggregator0.edgechain0.com:
+    url: localhost:30303
+    policy: EC_SPEC    
+peers:
+  peer0.org1.example.com:
+    url: grpcs://localhost:7051
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICJzCCAc2gAwIBAgIUDZ1FJ2ECeV3+dTtkpRjS/kAUulowCgYIKoZIzj0EAwIw
+        cDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ8wDQYDVQQH
+        EwZEdXJoYW0xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+        Lm9yZzEuZXhhbXBsZS5jb20wHhcNMjEwNjAyMTIzNDAwWhcNMzYwNTI5MTIzNDAw
+        WjBwMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExDzANBgNV
+        BAcTBkR1cmhhbTEZMBcGA1UEChMQb3JnMS5leGFtcGxlLmNvbTEcMBoGA1UEAxMT
+        Y2Eub3JnMS5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABE+Y
+        6i1bhydmcVhwFOsHPYARdLCKTq55C1Aal0k0ZeW+brYUxYA2qVGFrhhc3qb09YL0
+        VdB+bWSscdsBb2cq0VSjRTBDMA4GA1UdDwEB/wQEAwIBBjASBgNVHRMBAf8ECDAG
+        AQH/AgEBMB0GA1UdDgQWBBTHesmPDLTOizufD1umli6jNpqhrTAKBggqhkjOPQQD
+        AgNIADBFAiEAu9Z57V/L9Ot5Dez2UfYOZgB/YrDpW1nKHlqB7qFu3jsCICb5dPEE
+        A8r8bKjs/ZXfXdUjKaJtODmDhY7xUFlOUq0P
+        -----END CERTIFICATE-----   
+    grpcOptions:
+      ssl-target-name-override: peer0.org1.example.com
+      hostnameOverride: peer0.org1.example.com
+certificateAuthorities:
+  ca.org1.example.com:
+    url: https://localhost:7054
+    caName: ca-org1
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICJzCCAc2gAwIBAgIUDZ1FJ2ECeV3+dTtkpRjS/kAUulowCgYIKoZIzj0EAwIw
+        cDELMAkGA1UEBhMCVVMxFzAVBgNVBAgTDk5vcnRoIENhcm9saW5hMQ8wDQYDVQQH
+        EwZEdXJoYW0xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+        Lm9yZzEuZXhhbXBsZS5jb20wHhcNMjEwNjAyMTIzNDAwWhcNMzYwNTI5MTIzNDAw
+        WjBwMQswCQYDVQQGEwJVUzEXMBUGA1UECBMOTm9ydGggQ2Fyb2xpbmExDzANBgNV
+        BAcTBkR1cmhhbTEZMBcGA1UEChMQb3JnMS5leGFtcGxlLmNvbTEcMBoGA1UEAxMT
+        Y2Eub3JnMS5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABE+Y
+        6i1bhydmcVhwFOsHPYARdLCKTq55C1Aal0k0ZeW+brYUxYA2qVGFrhhc3qb09YL0
+        VdB+bWSscdsBb2cq0VSjRTBDMA4GA1UdDwEB/wQEAwIBBjASBgNVHRMBAf8ECDAG
+        AQH/AgEBMB0GA1UdDgQWBBTHesmPDLTOizufD1umli6jNpqhrTAKBggqhkjOPQQD
+        AgNIADBFAiEAu9Z57V/L9Ot5Dez2UfYOZgB/YrDpW1nKHlqB7qFu3jsCICb5dPEE
+        A8r8bKjs/ZXfXdUjKaJtODmDhY7xUFlOUq0P
+        -----END CERTIFICATE-----
+        
+    httpOptions:
+      verify: false
+    

@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  ca.org1.example.com:
+    image: hyperledger/fabric-ca:1.4.7
+    container_name: ca-org1
+    environment:
+      - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+      - FABRIC_CA_SERVER_CA_NAME=ca-org1
+      - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca-cert.pem
+      - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/msp/keystore/573ce579f341cfaba8ba864a68f22ce6460e90b14aee5de4cd0b1ef28f76b18e_sk
+      - FABRIC_CA_SERVER_TLS_ENABLED=true
+      - FABRIC_CA_SERVER_TLS_CERTFILE=/etc/hyperledger/fabric-ca-server-config/tls-cert.pem
+      - FABRIC_CA_SERVER_TLS_KEYFILE=/etc/hyperledger/fabric-ca-server-config/msp/keystore/912f5243a173cf527d02053fb53a7371a6f47d3e27db892f5437de3640799796_sk
+    ports:
+      - "7054:7054"
+    command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
+    volumes:
+      - ./organizations/fabric-ca/org1:/etc/hyperledger/fabric-ca-server-config

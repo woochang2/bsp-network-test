@@ -38,6 +38,7 @@ $ ./run.sh
 
 ### 3. Enroll admin and register user
 ```bash
+$ cd ..
 $ node enrollAdmin.js
 $ node registerUser.js
 ```

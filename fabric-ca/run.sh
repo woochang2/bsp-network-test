@@ -1,4 +1,4 @@
 #!/bin/bash
-# docker-compose up
+docker rm ca-org1 -f
 
 docker-compose up

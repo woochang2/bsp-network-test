@@ -26,9 +26,9 @@ $ cd bsp-network-test
 ```
 
 ### 1. Install a bsp-node-sdk npm package
-**Currently working version is 0.0.4**
+**Currently working version is 0.0.5**
 ```bash 
-$ npm install bsp-network@0.0.4
+$ npm install bsp-network@0.0.5
 ```
 
 ### 2. run a local fabric-ca container to create identities for connecting bsp-network
@@ -38,6 +38,7 @@ $ ./run.sh
 ```
 
 ### 3. Enroll admin and register user
+Open new terminal
 ```bash
 $ cd ..
 $ node enrollAdmin.js

@@ -26,8 +26,9 @@ $ cd bsp-network-test
 ```
 
 ### 1. Install a bsp-node-sdk npm package
+**Currently working version is 0.0.4**
 ```bash 
-$ npm install bsp-network
+$ npm install bsp-network@0.0.4
 ```
 
 ### 2. run a local fabric-ca container to create identities for connecting bsp-network

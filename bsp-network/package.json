@@ -1,28 +1,28 @@
 {
-  "_from": "bsp-network",
-  "_id": "bsp-network@0.0.2",
+  "_from": "bsp-network@0.0.4",
+  "_id": "bsp-network@0.0.4",
   "_inBundle": false,
-  "_integrity": "sha512-uuxDZfdN5VePs3H1niAfcmBQAHYmSJh0o8HYBgzv6mpRzWu9bKcb/2+wMR/R2eNQn0ElvELddhbLxFP6ygMjVw==",
+  "_integrity": "sha512-47ilOIVjxxV5wCQDw+TwsVXg5BLzvMq5qGLN7eQlmm5ZArYelc4E6EumyVuNPafYsQPBspOi+0ytp+1E3ecWyQ==",
   "_location": "/bsp-network",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "bsp-network",
+    "raw": "bsp-network@0.0.4",
     "name": "bsp-network",
     "escapedName": "bsp-network",
-    "rawSpec": "",
+    "rawSpec": "0.0.4",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "0.0.4"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bsp-network/-/bsp-network-0.0.2.tgz",
-  "_shasum": "1f1d80f553d04c378cf0be00ee93a72b16be51d1",
-  "_spec": "bsp-network",
-  "_where": "/home/wcjeong/bsp_211001",
+  "_resolved": "https://registry.npmjs.org/bsp-network/-/bsp-network-0.0.4.tgz",
+  "_shasum": "bd1dc848224b5e9a32416b22a6e727db40460890",
+  "_spec": "bsp-network@0.0.4",
+  "_where": "/home/wcjeong/bsp-network-test",
   "author": {
     "name": "wcjeong",
     "email": "wcjeong@postech.ac.kr"
@@ -35,6 +35,7 @@
     "fabric-ca-client": "latest-2.1",
     "fabric-common": "latest-2.1",
     "fs-extra": "^8.1.0",
+    "js-yaml": "^4.1.0",
     "long": "^4.0.0",
     "nano": "^8.1.0",
     "winston": "^2.4.0"
@@ -98,7 +99,7 @@
   "scripts": {
     "test": "nyc mocha --recursive  -t 10000"
   },
-  "tag": "latest-2.1",
+  "tag": "latest",
   "types": "./types/index.d.ts",
-  "version": "0.0.2"
+  "version": "0.0.4"
 }

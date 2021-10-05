@@ -1,6 +1,7 @@
 ---
 name: test-network-org1
 version: 1.0.0
+region: edgechain0
 client:
   organization: Org1
   connection:

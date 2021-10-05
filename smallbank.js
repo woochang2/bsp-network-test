@@ -33,15 +33,20 @@ async function main() {
         const gateway = new Gateway();
         await gateway.connect(ccp, { wallet, identity: 'admin', discovery: { enabled: false, asLocalhost: false } });
 
+        const channelId = 'mychannel';
+        const contractId = 'smallbanktest';
+        const functionName = 'create_account';
+        const args = ['edgechain::0:::john', 'john', '100000000', '432424234'];
+
         // Get the network (channel) our contract is deployed to.
-        const network = await gateway.getNetwork('mychannel');
+        const network = await gateway.getNetwork(channelId);
 
         // Get the contract from the network.
-        const contract = network.getContract('smallbank');
+        const contract = network.getContract(contractId);
 
         // Submit the specified transaction.
-        await contract.submitTransaction('create_account', 'edgechain::0:::client0.edgechain0.com001036', '100000000');
-        console.log('Transaction has been submitted');
+        await contract.submitTransaction(functionName, args[0], args[1], args[2], args[3]);
+        console.log('Transaction has been successfully submitted');
         
         // Disconnect from the gateway.
         await gateway.disconnect();

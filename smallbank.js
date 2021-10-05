@@ -36,7 +36,7 @@ async function main() {
         const channelId = 'mychannel';
         const contractId = 'smallbanktest';
         const functionName = 'create_account';
-        const args = ['edgechain::0:::john', 'john', '100000000', '432424234'];
+        const args = ['edgechain::0:::woochang22', 'woochang22', '100000000', '432424234'];
 
         // Get the network (channel) our contract is deployed to.
         const network = await gateway.getNetwork(channelId);
@@ -47,6 +47,8 @@ async function main() {
         // Submit the specified transaction.
         await contract.submitTransaction(functionName, args[0], args[1], args[2], args[3]);
         console.log('Transaction has been successfully submitted');
+        console.log('function name: ', functionName);
+        console.log('function arguments: ', args);
         
         // Disconnect from the gateway.
         await gateway.disconnect();

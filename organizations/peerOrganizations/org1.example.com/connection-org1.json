@@ -50,7 +50,7 @@
     },
     "aggregators": {
         "aggregator0.edgechain0.com": {
-            "url": "localhost:30303",
+            "url": "3.34.84.129:30303",
 			"policy": "EC_SPEC",
             "readpolicy": 1
         }

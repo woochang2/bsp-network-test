@@ -236,6 +236,7 @@ class Transaction {
                 else {
                     // Getting Status of Tx Event
                     var status = ProposalResponsePb.getStatus();
+                    var payload = ProposalResponsePb.getPayload();
 
                     if(status == "triggered"){
                         bspChangeOngoing = true;

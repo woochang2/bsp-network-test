@@ -65,11 +65,11 @@ auditors:
 # Policy Candidates: "EC_SPEC", "EC_ORDERED", "EC_PREPARED", "EC_COMMIT", "MC_ORDERED", "MC_COMMIT", "MC_PROGRESS"      
 aggregators:
   aggregator0.edgechain0.com:
-    url: 141.223.121.62:30303
+    url: 3.34.84.129:30303
     policy: EC_SPEC    
 peers:
   aggregator0.edgechain0.com:
-    url: grpcs://141.223.121.62:7051
+    url: grpcs://3.34.84.129:7051
     tlsCACerts:
       pem: |
         -----BEGIN CERTIFICATE-----
